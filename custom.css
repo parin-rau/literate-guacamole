@@ -1,0 +1,16 @@
+.expandable {
+	display: none;
+	overflow: hidden;
+}
+
+.expand {
+	display: flex;
+}
+
+.flippable {
+	transition: 0.2s ease-out;
+}
+
+.flip {
+	transform: rotate(-180deg);
+}
