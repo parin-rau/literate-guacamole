@@ -57,20 +57,130 @@
 
 					<div
 						id="about"
-						class="expandable expand flex flex-col p-2 gap-6"
+						class="expandable expand flex flex-col p-2 gap-10"
 					>
-						<p>
-							Mechanical Engineer experienced in end-to-end
-							product lifecycle development in the aerospace
-							industry with a focus on mechanisms and solar array.
-							I work on software projects in my free time.
-						</p>
-						<a
-							class="px-4 py-2 w-fit font-semibold bg-blue-500 dark:bg-blue-700 hover:bg-blue-400 dark:hover:bg-blue-600 rounded-md text-slate-100"
-							href="./assets/download/Parin Rau Resume - Mechanical Engineer.pdf"
-							target="_blank"
-							>Download Resume</a
-						>
+						<div class="flex flex-col gap-6">
+							<p>
+								Mechanical Engineer experienced in end-to-end
+								product lifecycle development in the aerospace
+								industry with a focus on mechanism and solar
+								array development. I work on software projects
+								in my free time.
+							</p>
+							<a
+								class="px-4 py-2 w-fit font-semibold bg-blue-500 dark:bg-blue-700 hover:bg-blue-400 dark:hover:bg-blue-600 rounded-md text-slate-100"
+								href="./assets/download/Parin Rau Resume - Mechanical Engineer.pdf"
+								target="_blank"
+								>Download Resume</a
+							>
+						</div>
+
+						<div class="flex flex-col gap-4">
+							<h2 class="text-lg font-bold">Experience</h2>
+							<div
+								class="px-12 border border-slate-300 dark:border-neutral-800 rounded-xl"
+							>
+								<ul
+									class="flex flex-col gap-2 border-s-8 border-red-400 dark:border-red-500"
+								>
+									<li
+										class="relative flex flex-col gap-4 p-4 my-4 ml-8 w-fit bg-slate-100 dark:bg-neutral-800 rounded-lg"
+									>
+										<div>
+											<div
+												class="absolute w-8 h-8 -left-[3.25rem] top-3 border-8 border-red-400 dark:border-red-500 bg-slate-100 rounded-full"
+											></div>
+											<h4 class="font-semibold">2022</h4>
+											<h3 class="font-semibold text-lg">
+												Momentus Space
+											</h3>
+											<p>Description goes here</p>
+										</div>
+										<img
+											src="./assets/img/momentus-1.png"
+											class="rounded-xl object-scale-down object-left h-52"
+										/>
+									</li>
+
+									<li
+										class="relative flex flex-col gap-4 p-4 my-4 ml-8 w-fit bg-slate-100 dark:bg-neutral-800 rounded-lg"
+									>
+										<div>
+											<div
+												class="absolute w-8 h-8 -left-[3.25rem] top-3 border-8 border-red-400 dark:border-red-500 bg-slate-100 rounded-full"
+											></div>
+											<h4 class="font-semibold">2020</h4>
+											<h3 class="font-semibold text-lg">
+												Maxar Technologies
+											</h3>
+											<p>Description goes here</p>
+										</div>
+										<img
+											src="./assets/img/maxar-1.jpg"
+											class="rounded-xl object-scale-down object-left h-52"
+										/>
+									</li>
+
+									<li
+										class="relative flex flex-col gap-4 p-4 my-4 ml-8 w-fit bg-slate-100 dark:bg-neutral-800 rounded-lg"
+									>
+										<div>
+											<div
+												class="absolute w-8 h-8 -left-[3.25rem] top-3 border-8 border-red-400 dark:border-red-500 bg-slate-100 rounded-full"
+											></div>
+											<h4 class="font-semibold">2019</h4>
+											<h3 class="font-semibold text-lg">
+												Autonomous Hydrofoil Sailboat
+												for Renewable Energy
+											</h3>
+											<p>Description goes here</p>
+										</div>
+										<img
+											src="./assets/img/momentus-1.png"
+											class="rounded-xl object-scale-down object-left h-52"
+										/>
+									</li>
+
+									<li
+										class="relative flex flex-col gap-4 p-4 my-4 ml-8 w-fit bg-slate-100 dark:bg-neutral-800 rounded-lg"
+									>
+										<div>
+											<div
+												class="absolute w-8 h-8 -left-[3.25rem] top-3 border-8 border-red-400 dark:border-red-500 bg-slate-100 rounded-full"
+											></div>
+											<h4 class="font-semibold">2018</h4>
+											<h3 class="font-semibold text-lg">
+												Formula SAE at UC Davis
+											</h3>
+											<p>Description goes here</p>
+										</div>
+										<img
+											src="./assets/img/fsae-1.png"
+											class="rounded-xl object-scale-down object-left h-52"
+										/>
+									</li>
+
+									<li
+										class="relative flex flex-col gap-4 p-4 my-4 ml-8 w-fit bg-slate-100 dark:bg-neutral-800 rounded-lg"
+									>
+										<div>
+											<div
+												class="absolute w-8 h-8 -left-[3.25rem] top-3 border-8 border-red-400 dark:border-red-500 bg-slate-100 rounded-full"
+											></div>
+											<h4 class="font-semibold">2017</h4>
+											<h3 class="font-semibold text-lg">
+												Oneloop
+											</h3>
+											<p>Description goes here</p>
+										</div>
+										<img
+											src="./assets/img/oneloop-1.jpg"
+											class="rounded-xl object-scale-down object-left h-52"
+										/>
+									</li>
+								</ul>
+							</div>
+						</div>
 					</div>
 				</div>
 
@@ -310,10 +420,18 @@
 	</body>
 
 	<footer
-		class="fixed left-0 bottom-0 w-full p-4 bg-neutral-900 flex justify-items-center"
+		class="fixed left-0 bottom-0 w-full p-4 bg-slate-200 dark:bg-neutral-900 flex justify-items-center"
 	>
 		<div class="mx-auto"><p>Copyright &copy; 2024 Parin Rau</p></div>
 	</footer>
+
+	<script>
+		class Timeline extends HTMLElement {
+			constructor() {
+				super();
+			}
+		}
+	</script>
 
 	<script type="text/javascript">
 		function toggleClass(elements) {
