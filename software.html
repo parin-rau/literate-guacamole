@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link href="./output.css" rel="stylesheet" />
+		<link href="./custom.css" rel="stylesheet" />
+		<title>Software Engineering</title>
+	</head>
+	<body
+		class="pt-10 px-20 mb-20 bg-slate-100 text-neutral-900 dark:bg-neutral-950 dark:text-slate-200"
+	>
+		<div class="flex flex-col gap-10">
+			<div id="header" class="flex justify-between align-top">
+				<div class="flex flex-col gap-4">
+					<h1 class="text-4xl font-bold">Parin Rau</h1>
+					<div class="flex flex-col gap-2">
+						<h2 class="text-xl font-semibold">
+							Mechanical & Software Engineer
+						</h2>
+						<h4 class="text-lg">San Francisco Bay Area</h4>
+					</div>
+				</div>
+				<div class="flex gap-4 items-center h-fit">
+					<a
+						class="p-2 hover:bg-slate-200 hover:dark:bg-neutral-700 rounded-md"
+						href="./index.html"
+						>About</a
+					>
+					<a
+						class="p-2 hover:bg-slate-200 hover:dark:bg-neutral-700 rounded-md"
+						href="./mechanical.html"
+						>Mechanical Engineering</a
+					>
+					<a
+						class="p-2 hover:bg-slate-200 hover:dark:bg-neutral-700 rounded-md"
+						href="./software.html"
+						>Software Engineering</a
+					>
+					<a
+						class="p-2 hover:bg-slate-200 hover:dark:bg-neutral-700 rounded-md"
+						href="./contact.html"
+						>Contact</a
+					>
+					<button
+						id="dark-mode-toggle"
+						class="p-2 h-fit hover:bg-slate-300 dark:hover:bg-neutral-700 rounded-md"
+						onclick="toggleDarkMode()"
+					></button>
+				</div>
+			</div>
+
+			<div class="flex flex-col gap-4">
+				<div
+					id="software-container"
+					class="container-transition p-4 flex flex-col gap-6 bg-slate-200 dark:bg-neutral-900 rounded-lg"
+				>
+					<h2 class="p-2 text-2xl font-bold">
+						Software Engineering Projects
+					</h2>
+
+					<!-- <button
+						class="w-fit flex flex-row gap-4 items-end p-2 rounded-md hover:bg-slate-300 dark:hover:bg-neutral-700"
+						onclick="toggleClass([{elementId: 'software-exp', className: ['expand']}, {elementId: 'software-chevron', className: ['flip']}])"
+					>
+						<h2 class="text-xl font-bold">
+							Software Engineering Projects
+						</h2>
+						<svg
+							id="software-chevron"
+							xmlns="http://www.w3.org/2000/svg"
+							fill="none"
+							viewBox="0 0 24 24"
+							stroke-width="1.5"
+							stroke="currentColor"
+							class="w-6 h-6 flippable"
+						>
+							<path
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								d="m19.5 8.25-7.5 7.5-7.5-7.5"
+							/>
+						</svg>
+					</button> -->
+
+					<ul
+						id="software-exp"
+						class="expandable expand flex flex-col gap-6"
+					>
+						<div
+							id="under-contruction"
+							class="p-4 text-amber-800 bg-amber-500 rounded-lg"
+						>
+							<p>
+								<strong>Note</strong> This section is still
+								under construction
+							</p>
+						</div>
+
+						<li>
+							<h3 class="text-xl font-semibold">Task Manager</h3>
+							<ul>
+								<li>Similar to Jira</li>
+								<li>Tech Stack</li>
+								<li>Lessons Learned</li>
+							</ul>
+						</li>
+						<li>
+							<h3 class="text-xl font-semibold">
+								Job Application Tracker
+							</h3>
+							<ul>
+								<li>Tech Stack</li>
+								<li>
+									Text-to-File browser extension. save job
+									descriptions. drag-and-drop to add to db
+								</li>
+							</ul>
+						</li>
+						<li>
+							<h3 class="text-xl font-semibold">
+								This Portfolio Website
+							</h3>
+							<ul>
+								<li>Built with HTML/CSS/JS</li>
+								<li>TailwindCSS</li>
+								<li>Github</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</body>
+
+	<footer
+		class="fixed flex justify-items-center left-0 bottom-0 w-full p-4 bg-slate-200 dark:bg-neutral-900 border-t border-slate-300 dark:border-neutral-800"
+	>
+		<div class="mx-auto">
+			<p>Copyright &copy; 2024 Parin Rau</p>
+		</div>
+	</footer>
+
+	<script type="text/javascript">
+		function toggleClass(elements) {
+			elements.forEach((obj) => {
+				const el = document.getElementById(obj.elementId);
+				obj.className.forEach((c) => el.classList.toggle(c));
+			});
+		}
+
+		function toggleDarkMode() {
+			const el = document.getElementById("dark-mode-toggle");
+			const doc = document.documentElement;
+			const icon = document.getElementById("dark-mode-icon");
+			if (icon) el.removeChild(icon);
+
+			const img = document.createElement("img");
+			img.id = "dark-mode-icon";
+			img.classList.add("w-6", "h-6");
+
+			if (document.documentElement.classList.contains("dark")) {
+				localStorage.theme = "light";
+				img.src = "./assets/svg/dark-mode.svg";
+				doc.classList.remove("dark");
+				el.appendChild(img);
+			} else {
+				localStorage.theme = "dark";
+				img.src = "./assets/svg/light-mode.svg";
+				doc.classList.add("dark");
+				el.appendChild(img);
+			}
+		}
+	</script>
+
+	<script>
+		const darkModeToggle = document.getElementById("dark-mode-toggle");
+		const img = document.createElement("img");
+		img.id = "dark-mode-icon";
+		img.classList.add("w-6", "h-6");
+
+		if (
+			localStorage.theme === "dark" ||
+			(!("theme" in localStorage) &&
+				window.matchMedia("(prefers-color-scheme: dark)").matches)
+		) {
+			localStorage.theme = "dark";
+			document.documentElement.classList.add("dark");
+			img.src = "./assets/svg/light-mode.svg";
+			darkModeToggle.appendChild(img);
+		} else {
+			localStorage.theme = "light";
+			document.documentElement.classList.remove("dark");
+			img.src = "./assets/svg/dark-mode.svg";
+			darkModeToggle.appendChild(img);
+		}
+	</script>
+</html>
