@@ -57,39 +57,15 @@
 				>
 					<h2 class="p-2 text-2xl font-bold">About</h2>
 
-					<!-- <button
-						class="w-fit flex flex-row gap-4 items-end p-2 rounded-md hover:bg-slate-300 dark:hover:bg-neutral-700"
-						onclick="toggleClass([{elementId: 'about', className: ['expand']}, {elementId: 'about-chevron', className: ['flip']}])"
-					>
-						<h2 class="text-xl font-bold">About</h2>
-						<svg
-							id="about-chevron"
-							xmlns="http://www.w3.org/2000/svg"
-							fill="none"
-							viewBox="0 0 24 24"
-							stroke-width="1.5"
-							stroke="currentColor"
-							class="w-6 h-6 flippable flip"
-						>
-							<path
-								stroke-linecap="round"
-								stroke-linejoin="round"
-								d="m19.5 8.25-7.5 7.5-7.5-7.5"
-							/>
-						</svg>
-					</button> -->
-
-					<div
-						id="about"
-						class="expandable expand flex flex-col p-2 gap-10"
-					>
+					<div id="about" class="flex flex-col p-2 gap-10">
 						<div class="flex flex-col gap-6">
 							<p>
 								Mechanical Engineer experienced in end-to-end
 								product lifecycle development in the aerospace
 								industry with a focus on mechanism and solar
-								array development. I work on software projects
-								in my free time.
+								array development for spacecraft. I work on
+								software projects in my free time. Bachelor's
+								Degree in Mechanical Engineering from UC Davis.
 							</p>
 
 							<a
@@ -123,149 +99,250 @@
 									class="container mx-auto md:mx-20 lg:mx-40 xl:mx-60 flex flex-col gap-2 border-s-8 border-red-400 dark:border-red-500"
 								>
 									<li
-										class="relative flex flex-col gap-4 p-4 my-4 ml-8 w-fit bg-slate-100 dark:bg-neutral-800 rounded-lg"
+										class="relative flex flex-col gap-8 p-4 my-4 ml-8 w-fit bg-slate-100 dark:bg-neutral-800 rounded-lg"
 									>
-										<div>
+										<div class="flex flex-col gap-4">
 											<div
 												class="absolute w-8 h-8 -left-[3.25rem] top-3 border-8 border-red-400 dark:border-red-500 bg-slate-100 rounded-full"
 											></div>
-											<h4 class="font-semibold">2022</h4>
-											<h3 class="font-semibold text-lg">
-												Momentus Space
-											</h3>
-											<p>
-												Mechanical Engineer, Mechanisms
-												and Solar Array
-											</p>
-											<p>
-												Owned end-to-end design of
-												subsystem critical to solar
-												array functionality
-											</p>
-											<p>
-												Prototyping & system design on
-												R&D team
-											</p>
-											<p>
-												Test Fixture and Tool Design to
-												support new product introduction
-											</p>
-											<p>Electronics enclosure design</p>
+											<div class="flex flex-col">
+												<h4 class="font-semibold">
+													2022
+												</h4>
+												<h3
+													class="font-semibold text-lg"
+												>
+													Momentus Space
+												</h3>
+												<i>
+													Mechanical Engineer,
+													Mechanisms and Solar Array
+												</i>
+											</div>
+											<ul class="list-disc list-inside">
+												<li>
+													Owned end-to-end design of
+													subsystem critical to solar
+													array functionality
+												</li>
+												<li>
+													Collaborated with small R&D
+													engineering team
+												</li>
+												<li>
+													Rapid protoyping to iterate
+													on designs
+												</li>
+												<li>
+													Test Fixture and Tool Design
+													to support new product
+													introduction
+												</li>
+												<li>
+													Supported satellite hardware
+													integration and test
+												</li>
+												<li>PCBA enclosure design</li>
+											</ul>
+											<img
+												src="./assets/img/momentus-1.png"
+												class="rounded-xl object-scale-down object-left h-52"
+											/>
 										</div>
-										<img
-											src="./assets/img/momentus-1.png"
-											class="rounded-xl object-scale-down object-left h-52"
-										/>
 									</li>
 
 									<li
 										class="relative flex flex-col gap-4 p-4 my-4 ml-8 w-fit bg-slate-100 dark:bg-neutral-800 rounded-lg"
 									>
-										<div>
+										<div class="flex flex-col gap-4">
 											<div
 												class="absolute w-8 h-8 -left-[3.25rem] top-3 border-8 border-red-400 dark:border-red-500 bg-slate-100 rounded-full"
 											></div>
-											<h4 class="font-semibold">2020</h4>
-											<h3 class="font-semibold text-lg">
-												Maxar Technologies
-											</h3>
-											<p>
-												Mechanical Design Engineer,
-												Deployable Mechanisms
-											</p>
-											<p>
-												Responsible Engineer for hinge
-												and actuator product lines
-											</p>
+											<div class="flex flex-col">
+												<h4 class="font-semibold">
+													2020
+												</h4>
+												<h3
+													class="font-semibold text-lg"
+												>
+													Maxar Technologies
+												</h3>
+												<i>
+													Mechanical Design Engineer,
+													Deployable Mechanisms
+												</i>
+											</div>
+											<ul class="list-disc list-inside">
+												<li>
+													Responsible design engineer
+													for hinge and actuator
+													product lines for
+													telecommunication satellites
+												</li>
+												<li>
+													Supported hardware
+													qualification and acceptance
+													testing for harsh space
+													environments
+												</li>
+												<li>
+													Cross-disciplinary
+													collaboration between
+													engineering, analysts,
+													program management,
+													production
+												</li>
+											</ul>
+											<img
+												src="./assets/img/maxar-1.jpg"
+												class="rounded-xl object-scale-down object-left h-52"
+											/>
 										</div>
-										<img
-											src="./assets/img/maxar-1.jpg"
-											class="rounded-xl object-scale-down object-left h-52"
-										/>
 									</li>
 
 									<li
 										class="relative flex flex-col gap-4 p-4 my-4 ml-8 w-fit bg-slate-100 dark:bg-neutral-800 rounded-lg"
 									>
-										<div>
+										<div class="flex flex-col gap-4">
 											<div
 												class="absolute w-8 h-8 -left-[3.25rem] top-3 border-8 border-red-400 dark:border-red-500 bg-slate-100 rounded-full"
 											></div>
-											<h4 class="font-semibold">2019</h4>
-											<h3 class="font-semibold text-lg">
-												Autonomous Hydrofoil Sailboat
-												for Renewable Energy
-											</h3>
-											<p>
-												Mechanical Design & Test
-												Engineer
-											</p>
-											<p>
-												Validated waypoint navigation
-												and hydrofoil functionality on
-												small-scale sailboat
-											</p>
-											<p>
-												Designed actuator and linkage
-												system for controlling
-												full-scale boat
-											</p>
+											<div class="flex flex-col">
+												<h4 class="font-semibold">
+													2019
+												</h4>
+												<h3
+													class="font-semibold text-lg"
+												>
+													Autonomous Hydrofoil
+													Sailboat for Renewable
+													Energy
+												</h3>
+												<i>
+													Mechanical Design & Test
+													Engineer
+												</i>
+											</div>
+											<ul class="list-disc list-inside">
+												<li>
+													Validated autonomous
+													waypoint navigation and
+													hydrofoil capabilities on
+													small-scale sailboat
+												</li>
+												<li>
+													Designed autonomous control
+													system for full-scale
+													sailboat using actuators and
+													linkages
+												</li>
+											</ul>
+											<img
+												src="./assets/img/ahb-1.png"
+												class="rounded-xl object-scale-down object-left h-52"
+											/>
 										</div>
-										<img
-											src="./assets/img/momentus-1.png"
-											class="rounded-xl object-scale-down object-left h-52"
-										/>
 									</li>
 
 									<li
 										class="relative flex flex-col gap-4 p-4 my-4 ml-8 w-fit bg-slate-100 dark:bg-neutral-800 rounded-lg"
 									>
-										<div>
+										<div class="flex flex-col gap-4">
 											<div
 												class="absolute w-8 h-8 -left-[3.25rem] top-3 border-8 border-red-400 dark:border-red-500 bg-slate-100 rounded-full"
 											></div>
-											<h4 class="font-semibold">2018</h4>
-											<h3 class="font-semibold text-lg">
-												Formula SAE at UC Davis
-											</h3>
-											<p>
-												Mechanical Engineer, Powertrain
-											</p>
+											<div class="flex flex-col">
+												<h4 class="font-semibold">
+													2018
+												</h4>
+												<h3
+													class="font-semibold text-lg"
+												>
+													Formula SAE at UC Davis
+												</h3>
+												<i>
+													Mechanical Engineer,
+													Powertrain
+												</i>
+											</div>
+											<ul class="list-disc list-inside">
+												<li>
+													Designed and manufactured
+													heatsink for highly
+													dissipative motor controller
+													mounted to high-performance
+													electric vehicle
+												</li>
+												<li>
+													Lap time improvements of
+													several seconds compared to
+													previous cooling design
+												</li>
+											</ul>
+											<img
+												src="./assets/img/fsae-1.png"
+												class="rounded-xl object-scale-down object-left h-52"
+											/>
 										</div>
-										<img
-											src="./assets/img/fsae-1.png"
-											class="rounded-xl object-scale-down object-left h-52"
-										/>
 									</li>
 
 									<li
 										class="relative flex flex-col gap-4 p-4 my-4 ml-8 w-fit bg-slate-100 dark:bg-neutral-800 rounded-lg"
 									>
-										<div>
+										<div class="flex flex-col gap-4">
 											<div
 												class="absolute w-8 h-8 -left-[3.25rem] top-3 border-8 border-red-400 dark:border-red-500 bg-slate-100 rounded-full"
 											></div>
-											<h4 class="font-semibold">2017</h4>
-											<h3 class="font-semibold text-lg">
-												Oneloop
-											</h3>
-											<p>
-												Test Engineer, Magnetic Brakes
-											</p>
-											<p>Lead Engineer, Fuselage</p>
-											<p>Lead Engineer, Powertrain</p>
-											<p>
-												Team was one of top 21 in the
-												world chosen to compete at
-												SpaceX test track facility.
-												Vehicle design ranked within top
-												3 in the US, top 10 in the world
-											</p>
+											<div class="flex flex-col">
+												<h4 class="font-semibold">
+													2017
+												</h4>
+												<h3
+													class="font-semibold text-lg"
+												>
+													Oneloop
+												</h3>
+												<i>Lead Engineer, Drivetrain</i>
+												<i>Lead Engineer, Fuselage</i>
+												<i>
+													Test Engineer, Magnetic
+													Brakes
+												</i>
+											</div>
+
+											<ul class="list-disc list-inside">
+												<li>
+													Team was one of top 21 in
+													the world chosen to compete
+													at SpaceX's Hyperloop test
+													track facility in 2019.
+													Vehicle design ranked top 3
+													in the US, top 10 in the
+													world.
+												</li>
+												<li>
+													Developed taxi drivetrain
+													system for vehicle using
+													actuators and stepper motors
+												</li>
+												<li>
+													Designed and fabricated
+													fuselage for maximizing
+													internal vehicle volume and
+													ease of servicability
+												</li>
+												<li>
+													Designed test fixtures and
+													procedures to validate
+													performance of high-speed
+													magnetic braking system
+												</li>
+											</ul>
+											<img
+												src="./assets/img/oneloop-1.jpg"
+												class="rounded-xl object-scale-down object-left h-52"
+											/>
 										</div>
-										<img
-											src="./assets/img/oneloop-1.jpg"
-											class="rounded-xl object-scale-down object-left h-52"
-										/>
 									</li>
 								</ul>
 							</div>
