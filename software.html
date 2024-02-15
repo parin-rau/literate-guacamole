@@ -7,21 +7,24 @@
 		<link href="./custom.css" rel="stylesheet" />
 		<title>Software Engineering</title>
 	</head>
+
 	<body
-		class="pt-10 px-20 mb-20 bg-slate-100 text-neutral-900 dark:bg-neutral-950 dark:text-slate-200"
+		class="pt-3 sm:pt-10 px-3 sm:px-10 lg:px-20 mb-20 bg-slate-100 text-neutral-900 dark:bg-neutral-950 dark:text-slate-200"
 	>
 		<div class="flex flex-col gap-10">
 			<div id="header" class="flex justify-between align-top">
 				<div class="flex flex-col gap-4">
 					<h1 class="text-4xl font-bold">Parin Rau</h1>
 					<div class="flex flex-col gap-2">
-						<h2 class="text-xl font-semibold">
+						<h2 class="md:text-xl font-semibold">
 							Mechanical & Software Engineer
 						</h2>
-						<h4 class="text-lg">San Francisco Bay Area</h4>
+						<h4 class="md:text-lg">San Francisco Bay Area</h4>
 					</div>
 				</div>
-				<div class="flex gap-4 items-center h-fit">
+				<div
+					class="flex flex-col md:flex-row gap-4 items-end md:items-start h-fit text-end md:text-center"
+				>
 					<a
 						class="p-2 hover:bg-slate-200 hover:dark:bg-neutral-700 rounded-md"
 						href="./index.html"
@@ -44,9 +47,14 @@
 					>
 					<button
 						id="dark-mode-toggle"
-						class="p-2 h-fit hover:bg-slate-300 dark:hover:bg-neutral-700 rounded-md"
+						class="p-2 h-fit flex-shrink-0 hover:bg-slate-300 dark:hover:bg-neutral-700 rounded-md"
 						onclick="toggleDarkMode()"
-					></button>
+					>
+						<div
+							id="dark-mode-icon-div"
+							class="flex-shrink-0 h-6"
+						></div>
+					</button>
 				</div>
 			</div>
 
@@ -58,30 +66,6 @@
 					<h2 class="p-2 text-2xl font-bold">
 						Software Engineering Projects
 					</h2>
-
-					<!-- <button
-						class="w-fit flex flex-row gap-4 items-end p-2 rounded-md hover:bg-slate-300 dark:hover:bg-neutral-700"
-						onclick="toggleClass([{elementId: 'software-exp', className: ['expand']}, {elementId: 'software-chevron', className: ['flip']}])"
-					>
-						<h2 class="text-xl font-bold">
-							Software Engineering Projects
-						</h2>
-						<svg
-							id="software-chevron"
-							xmlns="http://www.w3.org/2000/svg"
-							fill="none"
-							viewBox="0 0 24 24"
-							stroke-width="1.5"
-							stroke="currentColor"
-							class="w-6 h-6 flippable"
-						>
-							<path
-								stroke-linecap="round"
-								stroke-linejoin="round"
-								d="m19.5 8.25-7.5 7.5-7.5-7.5"
-							/>
-						</svg>
-					</button> -->
 
 					<ul
 						id="software-exp"
@@ -150,14 +134,14 @@
 		}
 
 		function toggleDarkMode() {
-			const el = document.getElementById("dark-mode-toggle");
+			const el = document.getElementById("dark-mode-icon-div");
 			const doc = document.documentElement;
 			const icon = document.getElementById("dark-mode-icon");
 			if (icon) el.removeChild(icon);
 
 			const img = document.createElement("img");
 			img.id = "dark-mode-icon";
-			img.classList.add("w-6", "h-6");
+			img.classList.add("h-full");
 
 			if (document.documentElement.classList.contains("dark")) {
 				localStorage.theme = "light";
@@ -174,10 +158,10 @@
 	</script>
 
 	<script>
-		const darkModeToggle = document.getElementById("dark-mode-toggle");
+		const el = document.getElementById("dark-mode-icon-div");
 		const img = document.createElement("img");
 		img.id = "dark-mode-icon";
-		img.classList.add("w-6", "h-6");
+		img.classList.add("h-full");
 
 		if (
 			localStorage.theme === "dark" ||
@@ -187,12 +171,12 @@
 			localStorage.theme = "dark";
 			document.documentElement.classList.add("dark");
 			img.src = "./assets/svg/light-mode.svg";
-			darkModeToggle.appendChild(img);
+			el.appendChild(img);
 		} else {
 			localStorage.theme = "light";
 			document.documentElement.classList.remove("dark");
 			img.src = "./assets/svg/dark-mode.svg";
-			darkModeToggle.appendChild(img);
+			el.appendChild(img);
 		}
 	</script>
 </html>

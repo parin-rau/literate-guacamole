@@ -7,21 +7,24 @@
 		<link href="./custom.css" rel="stylesheet" />
 		<title>Engineering Portfolio - Parin Rau</title>
 	</head>
+
 	<body
-		class="pt-10 px-20 mb-20 bg-slate-100 text-neutral-900 dark:bg-neutral-950 dark:text-slate-200"
+		class="pt-3 sm:pt-10 px-3 sm:px-10 lg:px-20 mb-20 bg-slate-100 text-neutral-900 dark:bg-neutral-950 dark:text-slate-200"
 	>
 		<div class="flex flex-col gap-10">
 			<div id="header" class="flex justify-between align-top">
 				<div class="flex flex-col gap-4">
 					<h1 class="text-4xl font-bold">Parin Rau</h1>
 					<div class="flex flex-col gap-2">
-						<h2 class="text-xl font-semibold">
+						<h2 class="md:text-xl font-semibold">
 							Mechanical & Software Engineer
 						</h2>
-						<h4 class="text-lg">San Francisco Bay Area</h4>
+						<h4 class="md:text-lg">San Francisco Bay Area</h4>
 					</div>
 				</div>
-				<div class="flex gap-4 items-center h-fit">
+				<div
+					class="flex flex-col md:flex-row gap-4 items-end md:items-start h-fit text-end md:text-center"
+				>
 					<a
 						class="p-2 hover:bg-slate-200 hover:dark:bg-neutral-700 rounded-md"
 						href="./index.html"
@@ -44,9 +47,14 @@
 					>
 					<button
 						id="dark-mode-toggle"
-						class="p-2 h-fit hover:bg-slate-300 dark:hover:bg-neutral-700 rounded-md"
+						class="p-2 h-fit flex-shrink-0 hover:bg-slate-300 dark:hover:bg-neutral-700 rounded-md"
 						onclick="toggleDarkMode()"
-					></button>
+					>
+						<div
+							id="dark-mode-icon-div"
+							class="flex-shrink-0 h-6"
+						></div>
+					</button>
 				</div>
 			</div>
 
@@ -119,7 +127,9 @@
 													Mechanisms and Solar Array
 												</i>
 											</div>
-											<ul class="list-disc list-inside">
+											<ul
+												class="pl-4 flex flex-col gap-1 list-disc list-outside"
+											>
 												<li>
 													Owned end-to-end design of
 													subsystem critical to solar
@@ -142,7 +152,12 @@
 													Supported satellite hardware
 													integration and test
 												</li>
-												<li>PCBA enclosure design</li>
+												<li>
+													<span
+														>PCBA enclosure
+														design</span
+													>
+												</li>
 											</ul>
 											<img
 												src="./assets/img/momentus-1.png"
@@ -172,7 +187,9 @@
 													Deployable Mechanisms
 												</i>
 											</div>
-											<ul class="list-disc list-inside">
+											<ul
+												class="pl-4 flex flex-col gap-2 list-disc list-outside"
+											>
 												<li>
 													Responsible design engineer
 													for hinge and actuator
@@ -223,7 +240,9 @@
 													Engineer
 												</i>
 											</div>
-											<ul class="list-disc list-inside">
+											<ul
+												class="pl-4 flex flex-col gap-2 list-disc list-outside"
+											>
 												<li>
 													Validated autonomous
 													waypoint navigation and
@@ -238,7 +257,7 @@
 												</li>
 											</ul>
 											<img
-												src="./assets/img/ahb-1.png"
+												src="./assets/img/ahb-1.PNG"
 												class="rounded-xl object-scale-down object-left h-52"
 											/>
 										</div>
@@ -265,7 +284,9 @@
 													Powertrain
 												</i>
 											</div>
-											<ul class="list-disc list-inside">
+											<ul
+												class="pl-4 flex flex-col gap-2 list-disc list-outside"
+											>
 												<li>
 													Designed and manufactured
 													heatsink for highly
@@ -310,7 +331,9 @@
 												</i>
 											</div>
 
-											<ul class="list-disc list-inside">
+											<ul
+												class="pl-4 flex flex-col gap-2 list-disc list-outside"
+											>
 												<li>
 													Team was one of top 21 in
 													the world chosen to compete
@@ -370,14 +393,14 @@
 		}
 
 		function toggleDarkMode() {
-			const el = document.getElementById("dark-mode-toggle");
+			const el = document.getElementById("dark-mode-icon-div");
 			const doc = document.documentElement;
 			const icon = document.getElementById("dark-mode-icon");
 			if (icon) el.removeChild(icon);
 
 			const img = document.createElement("img");
 			img.id = "dark-mode-icon";
-			img.classList.add("w-6", "h-6");
+			img.classList.add("h-full");
 
 			if (document.documentElement.classList.contains("dark")) {
 				localStorage.theme = "light";
@@ -394,10 +417,10 @@
 	</script>
 
 	<script>
-		const darkModeToggle = document.getElementById("dark-mode-toggle");
+		const el = document.getElementById("dark-mode-icon-div");
 		const img = document.createElement("img");
 		img.id = "dark-mode-icon";
-		img.classList.add("w-6", "h-6");
+		img.classList.add("h-full");
 
 		if (
 			localStorage.theme === "dark" ||
@@ -407,12 +430,12 @@
 			localStorage.theme = "dark";
 			document.documentElement.classList.add("dark");
 			img.src = "./assets/svg/light-mode.svg";
-			darkModeToggle.appendChild(img);
+			el.appendChild(img);
 		} else {
 			localStorage.theme = "light";
 			document.documentElement.classList.remove("dark");
 			img.src = "./assets/svg/dark-mode.svg";
-			darkModeToggle.appendChild(img);
+			el.appendChild(img);
 		}
 	</script>
 </html>

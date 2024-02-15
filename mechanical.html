@@ -7,21 +7,24 @@
 		<link href="./custom.css" rel="stylesheet" />
 		<title>Mechanical Engineering</title>
 	</head>
+
 	<body
-		class="pt-10 px-20 mb-20 bg-slate-100 text-neutral-900 dark:bg-neutral-950 dark:text-slate-200"
+		class="pt-3 sm:pt-10 px-3 sm:px-10 lg:px-20 mb-20 bg-slate-100 text-neutral-900 dark:bg-neutral-950 dark:text-slate-200"
 	>
 		<div class="flex flex-col gap-10">
 			<div id="header" class="flex justify-between align-top">
 				<div class="flex flex-col gap-4">
 					<h1 class="text-4xl font-bold">Parin Rau</h1>
 					<div class="flex flex-col gap-2">
-						<h2 class="text-xl font-semibold">
+						<h2 class="md:text-xl font-semibold">
 							Mechanical & Software Engineer
 						</h2>
-						<h4 class="text-lg">San Francisco Bay Area</h4>
+						<h4 class="md:text-lg">San Francisco Bay Area</h4>
 					</div>
 				</div>
-				<div class="flex gap-4 items-center h-fit">
+				<div
+					class="flex flex-col md:flex-row gap-4 items-end md:items-start h-fit text-end md:text-center"
+				>
 					<a
 						class="p-2 hover:bg-slate-200 hover:dark:bg-neutral-700 rounded-md"
 						href="./index.html"
@@ -44,9 +47,14 @@
 					>
 					<button
 						id="dark-mode-toggle"
-						class="p-2 h-fit hover:bg-slate-300 dark:hover:bg-neutral-700 rounded-md"
+						class="p-2 h-fit flex-shrink-0 hover:bg-slate-300 dark:hover:bg-neutral-700 rounded-md"
 						onclick="toggleDarkMode()"
-					></button>
+					>
+						<div
+							id="dark-mode-icon-div"
+							class="flex-shrink-0 h-6"
+						></div>
+					</button>
 				</div>
 			</div>
 
@@ -99,16 +107,469 @@
 
 							<div
 								id="momentus-project"
-								class="expandable px-2 flex flex-col gap-2"
+								class="expandable px-2 flex flex-col gap-8"
 							>
-								<h3 class="text-xl font-semibold">
-									Momentus Space
-								</h3>
-								<ul>
-									<li>Solar Array</li>
-									<li>Deployment Rig</li>
-									<li>Test</li>
-								</ul>
+								<div
+									class="p-6 grid grid-cols-1 md:grid-cols-2 gap-8 border border-slate-300 dark:border-neutral-700 rounded-lg"
+								>
+									<div class="flex flex-col gap-4">
+										<h3 class="text-lg font-semibold">
+											Overview
+										</h3>
+										<ul
+											class="pl-10 list-disc list-outside flex flex-col gap-2"
+										>
+											<li>
+												<span
+													>Roll-out solar array
+													designed in-house to mount
+													to satellites</span
+												>
+												<ul
+													class="pl-10 list-disc list-outside"
+												>
+													<li>
+														Like tape measure
+														covered in flexible
+														solar cells
+													</li>
+												</ul>
+											</li>
+											<li>
+												Significantly cheaper than
+												traditional Z-fold rigid panel
+												solar arrays
+											</li>
+											<li>
+												Less than 6 months to go from
+												almost-completed prototype in
+												the lab to shipping first fully
+												space-qualified solar array
+												system
+											</li>
+											<li>
+												<span
+													>Deployable
+													Mechanisms/Actuators</span
+												>
+												<ul
+													class="pl-10 list-disc list-outside"
+												>
+													<li>
+														Hold-Down Release
+														Mechanisms (HDRMs) to
+														react launch loads
+													</li>
+													<li>
+														Double-hinged yoke to
+														deploy array away from
+														spacecraft
+													</li>
+													<li>
+														Geared stepper motors to
+														drive deployment of
+														solar cell booms
+													</li>
+												</ul>
+											</li>
+										</ul>
+
+										<h3 class="text-lg font-semibold">
+											Responsibilities
+										</h3>
+										<ul
+											class="pl-10 list-disc list-outside flex flex-col gap-2"
+										>
+											<li>
+												End-to-end design of deployment
+												guide system
+											</li>
+											<li>
+												<span
+													>Support new product
+													introduction of entire solar
+													array system</span
+												>
+												<ul
+													class="pl-10 list-disc list-outside"
+												>
+													<li>
+														Qualification/acceptance
+														testing
+													</li>
+													<li>
+														manufacturing processes
+													</li>
+													<li>
+														Test fixture/tool design
+													</li>
+													<li>Vendor management</li>
+												</ul>
+											</li>
+										</ul>
+									</div>
+
+									<div
+										class="grid grid-cols-2 md:grid-cols-1 lg:grid-cols-2 gap-4 items-start"
+									>
+										<div class="flex flex-col items-center">
+											<img
+												src="./assets/img/momentus-tassa-deployed-1.png"
+												class="rounded-xl object-contain object-left max-w-full h-auto"
+											/>
+											<span class="text-center">
+												Deployed booms</span
+											>
+										</div>
+										<div class="flex flex-col items-center">
+											<img
+												src="./assets/img/momentus-tassa-stowed.PNG"
+												class="rounded-xl object-contain object-left max-w-full h-auto"
+											/><span class="text-center"
+												>Stowed booms (shown mounted to
+												satellite)</span
+											>
+										</div>
+									</div>
+								</div>
+
+								<div
+									class="p-6 grid grid-cols-1 md:grid-cols-2 gap-10 border border-slate-300 dark:border-neutral-700 rounded-lg"
+								>
+									<div class="flex flex-col gap-3">
+										<h3 class="text-lg font-semibold">
+											Deployment Guide Development
+										</h3>
+										<ul
+											class="pl-10 list-disc list-outside flex flex-col gap-2"
+										>
+											<li>
+												Last major R&D hurdle before
+												locking design for first flight
+											</li>
+											<li>
+												Like shape of opening on tape
+												measure
+											</li>
+											<li>
+												Guides boom material from flat
+												profile in coiled state to
+												curved profile as it deploys
+											</li>
+
+											<li>
+												<span
+													>Crucial to functionality of
+													solar array</span
+												>
+												<ul
+													class="pl-10 list-disc list-outside"
+												>
+													<li>
+														Prevent
+														buckling/crumpling of
+														booms and damaging solar
+														cells
+													</li>
+													<li>Array pointing</li>
+													<li>
+														Maintain stiffness under
+														satellite maneuvering
+														acceleration
+													</li>
+												</ul>
+											</li>
+										</ul>
+
+										<h3 class="text-lg font-semibold">
+											Design Process
+										</h3>
+										<ul
+											class="pl-10 list-disc list-outside flex flex-col gap-2"
+										>
+											<li>
+												<span>Rapid prototyping</span>
+												<ul
+													class="pl-10 list-disc list-outside"
+												>
+													<li>
+														Generate concept
+														geometry in CAD
+													</li>
+													<li>3D print</li>
+													<li>
+														Run full deployment test
+														with roll of sheet metal
+														on prototype
+													</li>
+													<li>
+														Iterate on design until
+														booms no longer crumple
+														during deployment
+														testing
+													</li>
+												</ul>
+											</li>
+											<li>
+												<span>Analysis</span>
+												<ul
+													class="pl-10 list-disc list-outside"
+												>
+													<li>
+														Aluminum chosen for
+														final design for
+														strength and quick
+														turnaround time for
+														parts
+													</li>
+													<li>
+														Modal analysis to
+														prevent coupling with
+														modes of the rest of the
+														solar array structure
+													</li>
+													<li>
+														Worst case quasi-static
+														load of fully deployed
+														boom weight applied to
+														guides (fixed-fixed beam
+														with center load)
+													</li>
+												</ul>
+											</li>
+											<li>
+												Finalized design within allotted
+												1 month and placed order for
+												machined aluminum flight design
+											</li>
+										</ul>
+
+										<h3 class="text-lg font-semibold">
+											Testing Issues
+										</h3>
+										<ul
+											class="pl-10 list-disc list-outside flex flex-col gap-2"
+										>
+											<li>
+												Booms (aluminum substrate)
+												crumpling when testing
+												deployment with finalized
+												metallic design mounted to
+												flight solar array system
+											</li>
+											<li>
+												PLA 3D printed plastic parts
+												from prototyping phase had
+												favorable friction properties vs
+												aluminum finalized guides
+											</li>
+											<li>
+												<span
+													>Inserted PTFE/Teflon shims
+													around guide-boom
+													interfacing surfaces and
+													solved crumpling issue on
+													subsequent deployment
+													test</span
+												>
+												<ul
+													class="pl-10 list-disc list-outside"
+												>
+													<li>
+														Fixed friction problems
+														at minimal weight cost
+													</li>
+													<li>
+														Material on-hand for
+														quick fix to prevent
+														schedule slip
+													</li>
+													<li>
+														Space-rated material, so
+														no further redesign
+														required
+													</li>
+												</ul>
+											</li>
+										</ul>
+									</div>
+
+									<div
+										class="md:order-first flex flex-col gap-4 items-center"
+									>
+										<div>
+											<img
+												src="./assets/img/momentus-tape.PNG"
+												class="rounded-xl object-contain object-left max-w-full h-auto"
+											/>
+										</div>
+										<div>
+											<img
+												src="./assets/img/momentus-crumple.PNG"
+												class="rounded-xl object-contain object-left max-w-full h-auto"
+											/>
+										</div>
+									</div>
+								</div>
+
+								<div
+									class="p-6 grid grid-cols-1 md:grid-cols-2 gap-8 border border-slate-300 dark:border-neutral-700 rounded-lg"
+								>
+									<div class="flex flex-col gap-4">
+										<h3 class="text-lg font-semibold">
+											Test Fixture Design
+										</h3>
+										<ul
+											class="pl-10 list-disc list-outside flex flex-col gap-2"
+										>
+											<li>
+												Verify yoke hinges and HDRMs
+												survived environmental
+												qualification testing (thermal
+												cycling, vibration)
+											</li>
+											<li>
+												<span
+													>Folding sidewall simulator
+													to support static base
+													structure of the solar
+													array</span
+												>
+												<ul
+													class="pl-10 list-disc list-outside"
+												>
+													<li>
+														COTS parts and
+														plasma-cut steel plates
+														for rapid turnaround
+														time
+													</li>
+													<li>
+														Easy integration of
+														TASSA to fixture
+													</li>
+												</ul>
+											</li>
+											<li>
+												<span
+													>Air bearings (furniture
+													movers) mount to TASSA to
+													support deployer structure
+													and booms over floor to
+													simulate 0g environment for
+													deployment</span
+												>
+												<ul
+													class="pl-10 list-disc list-outside"
+												>
+													<li>
+														Time consuming fine
+														tuning of air bearing
+														presures because of
+														uneven floor surface
+													</li>
+													<li>
+														Consider offloading from
+														above in the future
+													</li>
+												</ul>
+											</li>
+											<li>
+												After calibrating fixture,
+												successfully verified HDRM and
+												hinge mechanisms survived
+												environmental tests and yoke
+												umbilical harnesses (not
+												pictured) have sufficient torque
+												margin
+											</li>
+										</ul>
+									</div>
+
+									<div
+										class="grid grid-cols-2 md:grid-cols-1 lg:grid-cols-2 gap-4 items-start"
+									>
+										<div class="flex flex-col items-center">
+											<img
+												src="./assets/img/momentus-fixture-2.png"
+												class="rounded-xl object-contain object-left max-w-full h-auto"
+											/>
+											<span class="text-center">
+												Folded fixture</span
+											>
+										</div>
+										<div class="flex flex-col items-center">
+											<img
+												src="./assets/img/momentus-fixture-1.png"
+												class="rounded-xl object-contain object-left max-w-full h-auto"
+											/><span class="text-center"
+												>Upright fixture</span
+											>
+										</div>
+										<div class="flex flex-col items-center">
+											<img
+												src="./assets/img/momentus-fixture-4.png"
+												class="rounded-xl object-contain object-left max-w-full h-auto"
+											/><span class="text-center"
+												>Stowed TASSA with air bearings
+												installed</span
+											>
+										</div>
+										<div class="flex flex-col items-center">
+											<img
+												src="./assets/img/momentus-fixture-3.png"
+												class="rounded-xl object-contain object-left max-w-full h-auto"
+											/><span class="text-center"
+												>Deployed HDRMs and yoke</span
+											>
+										</div>
+									</div>
+								</div>
+
+								<div
+									class="p-6 grid grid-cols-1 md:grid-cols-2 gap-8 border border-slate-300 dark:border-neutral-700 rounded-lg"
+								>
+									<div class="flex flex-col gap-4">
+										<h3 class="text-lg font-semibold">
+											Project Outcomes
+										</h3>
+										<ul
+											class="pl-10 list-disc list-outside flex flex-col gap-2"
+										>
+											<li>
+												Able to maintain aggressive
+												development and qualification
+												schedule
+											</li>
+											<li>
+												Integrated to satellite as test
+												payload for first flight
+											</li>
+											<ii>
+												Successfully deployed on orbit
+												and demonstated feasibility of
+												product
+											</ii>
+										</ul>
+									</div>
+
+									<div
+										class="md:order-first grid grid-cols-1 gap-4 items-start"
+									>
+										<div>
+											<img
+												src="./assets/img/momentus-tassa-integrated-2.png"
+												class="rounded-xl object-contain object-left max-w-full h-auto"
+											/>
+										</div>
+										<div>
+											<img
+												src="./assets/img/momentus-tassa-integrated-1.png"
+												class="rounded-xl object-contain object-left max-w-full h-auto"
+											/>
+										</div>
+									</div>
+								</div>
 							</div>
 						</div>
 
@@ -289,14 +750,14 @@
 		}
 
 		function toggleDarkMode() {
-			const el = document.getElementById("dark-mode-toggle");
+			const el = document.getElementById("dark-mode-icon-div");
 			const doc = document.documentElement;
 			const icon = document.getElementById("dark-mode-icon");
 			if (icon) el.removeChild(icon);
 
 			const img = document.createElement("img");
 			img.id = "dark-mode-icon";
-			img.classList.add("w-6", "h-6");
+			img.classList.add("h-full");
 
 			if (document.documentElement.classList.contains("dark")) {
 				localStorage.theme = "light";
@@ -313,10 +774,10 @@
 	</script>
 
 	<script>
-		const darkModeToggle = document.getElementById("dark-mode-toggle");
+		const el = document.getElementById("dark-mode-icon-div");
 		const img = document.createElement("img");
 		img.id = "dark-mode-icon";
-		img.classList.add("w-6", "h-6");
+		img.classList.add("h-full");
 
 		if (
 			localStorage.theme === "dark" ||
@@ -326,12 +787,12 @@
 			localStorage.theme = "dark";
 			document.documentElement.classList.add("dark");
 			img.src = "./assets/svg/light-mode.svg";
-			darkModeToggle.appendChild(img);
+			el.appendChild(img);
 		} else {
 			localStorage.theme = "light";
 			document.documentElement.classList.remove("dark");
 			img.src = "./assets/svg/dark-mode.svg";
-			darkModeToggle.appendChild(img);
+			el.appendChild(img);
 		}
 	</script>
 </html>
