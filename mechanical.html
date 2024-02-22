@@ -17,7 +17,7 @@
 					<h1 class="text-4xl font-bold">Parin Rau</h1>
 					<div class="flex flex-col gap-2">
 						<h2 class="md:text-xl font-semibold">
-							Mechanical & Software Engineer
+							Mechanical Engineer
 						</h2>
 						<h4 class="md:text-lg">San Francisco Bay Area</h4>
 					</div>
@@ -33,13 +33,13 @@
 					<a
 						class="p-2 hover:bg-slate-200 hover:dark:bg-neutral-700 rounded-md"
 						href="./mechanical.html"
-						>Mechanical Engineering</a
+						>Projects</a
 					>
-					<a
+					<!-- <a
 						class="p-2 hover:bg-slate-200 hover:dark:bg-neutral-700 rounded-md"
 						href="./software.html"
 						>Software Engineering</a
-					>
+					> -->
 					<a
 						class="p-2 hover:bg-slate-200 hover:dark:bg-neutral-700 rounded-md"
 						href="./contact.html"
@@ -68,7 +68,7 @@
 					</h2>
 
 					<div id="mechanical-exp" class="flex flex-col gap-6">
-						<div
+						<!-- <div
 							id="under-contruction"
 							class="p-4 text-amber-800 bg-amber-500 rounded-lg"
 						>
@@ -76,14 +76,14 @@
 								<strong>Note</strong> This section is still
 								under construction
 							</p>
-						</div>
+						</div> -->
 
 						<div
 							class="flex flex-col gap-4 bg-slate-100 dark:bg-neutral-800 rounded-xl p-4"
 						>
 							<button
 								class="w-fit flex flex-row gap-4 items-end p-2 rounded-md hover:bg-slate-300 dark:hover:bg-neutral-700"
-								onclick="toggleClass([{elementId: 'momentus-project', className: ['expand']}, {elementId: 'momentus-chevron', className: ['flip']}])"
+								onclick="toggleClass([{elementId: 'momentus-project', className: ['expand']}, {elementId: 'momentus-chevron', className: ['flip']}, {elementId: 'tassa-cover-img', className: ['hidden']}])"
 							>
 								<h2 class="text-xl font-semibold">
 									Tape Spring Solar Array (TASSA)
@@ -104,6 +104,12 @@
 									/>
 								</svg>
 							</button>
+
+							<!-- <img
+								id="tassa-cover-img"
+								src="./assets/img/momentus-tassa-deployed-1.png"
+								class="rounded-xl w-1/4 h-auto"
+							/> -->
 
 							<div
 								id="momentus-project"
@@ -545,28 +551,26 @@
 												Integrated to satellite as test
 												payload for first flight
 											</li>
-											<ii>
+											<li>
 												Successfully deployed on orbit
 												and demonstated feasibility of
 												product
-											</ii>
+											</li>
 										</ul>
 									</div>
 
 									<div
 										class="md:order-first grid grid-cols-1 gap-4 items-start"
 									>
-										<div>
+										<div class="flex flex-col items-center">
 											<img
 												src="./assets/img/momentus-tassa-integrated-2.png"
 												class="rounded-xl object-contain object-left max-w-full h-auto"
 											/>
-										</div>
-										<div>
-											<img
-												src="./assets/img/momentus-tassa-integrated-1.png"
-												class="rounded-xl object-contain object-left max-w-full h-auto"
-											/>
+											<span
+												>TASSA integrated to
+												satellite</span
+											>
 										</div>
 									</div>
 								</div>
@@ -604,11 +608,190 @@
 								id="oneloop-1-project"
 								class="expandable px-2 flex flex-col gap-2"
 							>
-								<h3 class="text-xl font-semibold">Oneloop</h3>
+								<div
+									class="p-6 grid grid-cols-1 md:grid-cols-2 gap-8 border border-slate-300 dark:border-neutral-700 rounded-lg"
+								>
+									<div class="flex flex-col gap-4">
+										<h3 class="text-lg font-semibold">
+											Overview
+										</h3>
+										<ul
+											class="pl-10 list-disc list-outside flex flex-col gap-2"
+										>
+											<li>
+												Lead design and test engineer
+												for development of
+												electro-mechanical system
+											</li>
+											<li>
+												Deployable drivetrain system to
+												crawl vehicle along track when
+												main propulsion system is not in
+												use
+											</li>
+											<li>
+												System added late into design
+												phase of the overall vehicle, so
+												significant schedule and
+												technical (volume, mass, and
+												power budget) constraints on
+												development of this system
+											</li>
+										</ul>
+									</div>
+
+									<div
+										class="grid grid-cols-1 gap-4 items-start"
+									>
+										<div class="flex flex-col items-center">
+											<img
+												src="./assets/img/oneloop-3.jpg"
+												class="rounded-xl object-contain object-left max-w-full h-auto"
+											/>
+											<span>Drivetrain system</span>
+										</div>
+									</div>
+								</div>
+
+								<div
+									class="p-6 grid grid-cols-1 md:grid-cols-2 gap-8 border border-slate-300 dark:border-neutral-700 rounded-lg"
+								>
+									<div class="flex flex-col gap-4">
+										<h3 class="text-lg font-semibold">
+											Development
+										</h3>
+										<ul
+											class="pl-10 list-disc list-outside flex flex-col gap-2"
+										>
+											<li>
+												Linear actuator for retracting
+												wheel away from track surface
+												when not in use, and pushing
+												wheel into track to maintain
+												traction
+											</li>
+											<li>
+												Motor, gear, and wheel sized for
+												moving vehicle at 5mph with
+												minimal power and volume
+												requirements
+											</li>
+											<li>
+												<span
+													>Bellcrank linkage design
+													for compact physical
+													footprint of overall
+													system</span
+												>
+												<ul
+													class="pl-10 list-disc list-outside flex flex-col gap-1"
+												>
+													<li>
+														Limited vertical space
+														to position system in
+														vehicle
+													</li>
+													<li>
+														Translates horizontal
+														movement of linear
+														actuator into vertical
+														movement of wheel and
+														motor
+													</li>
+												</ul>
+											</li>
+											<li>
+												Design passed cricial design
+												review (CDR) with SpaceX
+												engineers judging overall
+												vehicle design
+											</li>
+
+											<li>
+												Custom metallic parts designed
+												for fabricating with waterjet
+												for quick lead times
+											</li>
+											<li>
+												Actuator and motor driven by
+												Arduino interfacing with
+												vehicle's main onboard PLC
+											</li>
+
+											<li>
+												System performance demonstrated
+												on fully-loaded vehicle
+											</li>
+										</ul>
+									</div>
+
+									<div
+										class="md:order-first grid grid-cols-1 gap-4 items-start"
+									>
+										<div class="flex flex-col items-center">
+											<video
+												src="./assets/video/oneloop-1.mov"
+												class="rounded-xl object-contain object-left max-w-full h-auto"
+												controls
+												muted
+												loop
+											></video>
+											<span
+												>Drivetrain system testing</span
+											>
+										</div>
+									</div>
+								</div>
+
+								<div
+									class="p-6 grid grid-cols-1 md:grid-cols-2 gap-8 border border-slate-300 dark:border-neutral-700 rounded-lg"
+								>
+									<div class="flex flex-col gap-4">
+										<h3 class="text-lg font-semibold">
+											Project Outcomes
+										</h3>
+										<ul
+											class="pl-10 list-disc list-outside flex flex-col gap-2"
+										>
+											<li>
+												Delivered functional drivetrain
+												system and integrated into
+												overall vehicle design
+											</li>
+											<li>
+												Vehicle chosen by SpaceX to
+												compete against other Hyperloop
+												teams at their testing facility
+											</li>
+											<li>
+												Team ranked top 3 in the US, top
+												10 in the world
+											</li>
+										</ul>
+									</div>
+
+									<div
+										class="grid grid-cols-1 gap-4 items-start"
+									>
+										<div class="flex flex-col items-center">
+											<video
+												src="./assets/video/oneloop-2.MOV"
+												class="rounded-xl object-contain object-left max-w-full h-auto"
+												muted
+												controls
+												loop
+											></video>
+											<span
+												>Drivetrain driving fully-loaded
+												vehicle</span
+											>
+										</div>
+									</div>
+								</div>
 							</div>
 						</div>
 
-						<div
+						<!-- <div
 							class="flex flex-col gap-4 bg-slate-100 dark:bg-neutral-800 rounded-xl p-4"
 						>
 							<button
@@ -641,7 +824,7 @@
 							>
 								<h3 class="text-xl font-semibold">Oneloop</h3>
 							</div>
-						</div>
+						</div> -->
 
 						<div
 							class="flex flex-col gap-4 bg-slate-100 dark:bg-neutral-800 rounded-xl p-4"
@@ -710,21 +893,66 @@
 								id="fsae-project"
 								class="expandable px-2 flex flex-col gap-2"
 							>
-								<h3 class="text-xl font-semibold">
-									Formula SAE at UC Davis
-								</h3>
-								<ul>
-									<li>G-code for CNC</li>
-									<li>
-										Aluminum heatsink to dissipate 500W heat
-										generation passively in turbulent flow
-										region in the rear of the car
-									</li>
-									<li>
-										Comparative studies with wind tunnel
-										simulation in solidworks
-									</li>
-								</ul>
+								<div class="flex flex-col gap-4">
+									<h3 class="text-lg font-semibold">
+										Overview
+									</h3>
+									<ul
+										class="pl-10 list-disc list-outside flex flex-col gap-1"
+									>
+										<li>
+											Aluminum heatsink to passively
+											dissipate 500W heat generation in
+											turbulent flow region in the rear of
+											an EV race car
+										</li>
+										<li>
+											Interface control documents from
+											motor controller vendor used to
+											determine mounting points and
+											expected heat generation from
+											controller to the heatsink
+										</li>
+										<li>
+											Built in strain-relief bracket for
+											high voltage cables connected to the
+											motor controller
+										</li>
+										<li>
+											Comparative studies in Solidworks
+											Flow with simulated wind tunnel to
+											down select final heat sink fin grid
+											layout
+										</li>
+										<li>
+											Created G-code for CNC milling the
+											part from aluminum stock
+										</li>
+										<li>
+											Lap time improvements of several
+											seconds because of improved motor
+											controller cooling
+										</li>
+									</ul>
+								</div>
+
+								<div class="flex flex-col gap-2">
+									<div class="flex flex-col gap-1">
+										<img
+											src="./assets/img/fsae-2.HEIC"
+											class="rounded-xl object-contain"
+										/>
+									</div>
+									<div class="flex flex-col gap-1">
+										<video
+											class="rounded-xl object-contain"
+											src="./assets/video/fsae-1.MOV"
+											muted
+											controls
+											loop
+										></video>
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
