@@ -729,13 +729,17 @@
 										class="md:order-first grid grid-cols-1 gap-4 items-start"
 									>
 										<div class="flex flex-col items-center">
-											<video
+											<!-- <video
 												src="./assets/video/oneloop-1.mov"
 												class="rounded-xl object-contain object-left max-w-full h-auto"
 												controls
 												muted
 												loop
-											></video>
+											></video> -->
+											<img
+												src="./assets/video/oneloop-1.gif"
+												class="rounded-xl object-contain object-left max-w-full h-auto"
+											/>
 											<span
 												>Drivetrain system testing</span
 											>
@@ -774,13 +778,17 @@
 										class="grid grid-cols-1 gap-4 items-start"
 									>
 										<div class="flex flex-col items-center">
-											<video
+											<!-- <video
 												src="./assets/video/oneloop-2.MOV"
 												class="rounded-xl object-contain object-left max-w-full h-auto"
 												muted
 												controls
 												loop
-											></video>
+											></video> -->
+											<img
+												src="./assets/video/oneloop-2.gif"
+												class="rounded-xl object-contain object-left max-w-full h-auto"
+											/>
 											<span
 												>Drivetrain driving fully-loaded
 												vehicle</span
@@ -792,41 +800,6 @@
 						</div>
 
 						<!-- <div
-							class="flex flex-col gap-4 bg-slate-100 dark:bg-neutral-800 rounded-xl p-4"
-						>
-							<button
-								class="w-fit flex flex-row gap-4 items-end p-2 rounded-md hover:bg-slate-300 dark:hover:bg-neutral-700"
-								onclick="toggleClass([{elementId: 'oneloop-2-project', className: ['expand']}, {elementId: 'oneloop-2-chevron', className: ['flip']}])"
-							>
-								<h2 class="text-xl font-semibold">
-									Hyperloop Fuselage
-								</h2>
-								<svg
-									id="oneloop-2-chevron"
-									xmlns="http://www.w3.org/2000/svg"
-									fill="none"
-									viewBox="0 0 24 24"
-									stroke-width="1.5"
-									stroke="currentColor"
-									class="w-6 h-6 flippable"
-								>
-									<path
-										stroke-linecap="round"
-										stroke-linejoin="round"
-										d="m19.5 8.25-7.5 7.5-7.5-7.5"
-									/>
-								</svg>
-							</button>
-
-							<div
-								id="oneloop-2-project"
-								class="expandable px-2 flex flex-col gap-2"
-							>
-								<h3 class="text-xl font-semibold">Oneloop</h3>
-							</div>
-						</div> -->
-
-						<div
 							class="flex flex-col gap-4 bg-slate-100 dark:bg-neutral-800 rounded-xl p-4"
 						>
 							<button
@@ -860,7 +833,7 @@
 							>
 								<h3 class="text-xl font-semibold">Boat</h3>
 							</div>
-						</div>
+						</div> -->
 
 						<div
 							class="flex flex-col gap-4 bg-slate-100 dark:bg-neutral-800 rounded-xl p-4"
@@ -893,64 +866,82 @@
 								id="fsae-project"
 								class="expandable px-2 flex flex-col gap-2"
 							>
-								<div class="flex flex-col gap-4">
-									<h3 class="text-lg font-semibold">
-										Overview
-									</h3>
-									<ul
-										class="pl-10 list-disc list-outside flex flex-col gap-1"
-									>
-										<li>
-											Aluminum heatsink to passively
-											dissipate 500W heat generation in
-											turbulent flow region in the rear of
-											an EV race car
-										</li>
-										<li>
-											Interface control documents from
-											motor controller vendor used to
-											determine mounting points and
-											expected heat generation from
-											controller to the heatsink
-										</li>
-										<li>
-											Built in strain-relief bracket for
-											high voltage cables connected to the
-											motor controller
-										</li>
-										<li>
-											Comparative studies in Solidworks
-											Flow with simulated wind tunnel to
-											down select final heat sink fin grid
-											layout
-										</li>
-										<li>
-											Created G-code for CNC milling the
-											part from aluminum stock
-										</li>
-										<li>
-											Lap time improvements of several
-											seconds because of improved motor
-											controller cooling
-										</li>
-									</ul>
-								</div>
-
-								<div class="flex flex-col gap-2">
-									<div class="flex flex-col gap-1">
-										<img
-											src="./assets/img/fsae-2.HEIC"
-											class="rounded-xl object-contain"
-										/>
+								<div
+									class="p-6 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 border border-slate-300 dark:border-neutral-700 rounded-lg"
+								>
+									<div class="flex flex-col gap-4">
+										<h3 class="text-lg font-semibold">
+											Overview
+										</h3>
+										<ul
+											class="pl-10 list-disc list-outside flex flex-col gap-1"
+										>
+											<li>
+												Aluminum heatsink to passively
+												dissipate 500W heat generation
+												in turbulent flow region in the
+												rear of an EV race car
+											</li>
+											<li>
+												Interface control documents from
+												motor controller vendor used to
+												determine mounting points and
+												expected heat generation from
+												controller to the heatsink
+											</li>
+											<li>
+												Built in strain-relief bracket
+												for high voltage cables
+												connected to the motor
+												controller
+											</li>
+											<li>
+												Comparative studies in
+												Solidworks Flow with simulated
+												wind tunnel to down select final
+												heat sink fin grid layout
+											</li>
+											<li>
+												Created G-code for CNC milling
+												the part from aluminum stock
+											</li>
+											<li>
+												Lap time improvements of several
+												seconds because of improved
+												motor controller cooling
+											</li>
+										</ul>
 									</div>
-									<div class="flex flex-col gap-1">
-										<video
+
+									<div class="flex flex-col gap-2">
+										<div
+											class="flex flex-col gap-1 items-center"
+										>
+											<img
+												src="./assets/img/fsae-2.PNG"
+												class="rounded-xl object-contain"
+											/>
+											<span
+												>Heatsink fin grid layout</span
+											>
+										</div>
+									</div>
+
+									<div
+										class="flex flex-col gap-1 items-center"
+									>
+										<!-- <video
 											class="rounded-xl object-contain"
 											src="./assets/video/fsae-1.MOV"
 											muted
 											controls
 											loop
-										></video>
+										></video> -->
+										<img
+											src="./assets/video/fsae-1.gif"
+											class="rounded-xl object-contain"
+										/>
+										<span>Heatsink on CNC mill</span>
 									</div>
 								</div>
 							</div>

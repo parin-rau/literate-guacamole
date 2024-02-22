@@ -867,12 +867,8 @@ video {
   height: 100%;
 }
 
-.h-20 {
-  height: 5rem;
-}
-
-.h-96 {
-  height: 24rem;
+.w-1\/4 {
+  width: 25%;
 }
 
 .w-6 {
@@ -902,10 +898,6 @@ video {
 
 .w-full {
   width: 100%;
-}
-
-.w-1\/4 {
-  width: 25%;
 }
 
 .max-w-full {
@@ -2874,5 +2866,9 @@ video {
   .xl\:mx-60 {
     margin-left: 15rem;
     margin-right: 15rem;
+  }
+
+  .xl\:grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
